@@ -34,6 +34,8 @@ while main_loop:
     game_loop = 1
     continuer_accueil = 1
 
+    background = pygame.image.load(background_pic).convert()
+
     #butcher creation
     butcher = character(r"C:\Users\vigor\PycharmProjects\Hotline Clermont\static\src\img\HM_ButcherWalking.png")
 
@@ -55,12 +57,13 @@ while main_loop:
                     angleRadian = math.atan2(event.pos[0] - butcher.x, event.pos[1] - butcher.y)
                     angleDegree = angleRadian * (180 / math.pi)
                     print(angleDegree)
-
                     butcher.rotate(angleDegree)
 
 
         #Refresh position
-        # fenetre.blit(butcher.sprite, (butcher.x, butcher.y))
-        fenetre.blit(butcher.sprite, butcher.sprite.get_rect())
+        print('x: {} y: {}'.format(butcher.x, butcher.y))
+        fenetre.blit(background, (0,0))
+        fenetre.blit(butcher.sprite, (butcher.x, butcher.y))
+
 
         pygame.display.flip()

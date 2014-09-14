@@ -8,7 +8,8 @@ class character:
 
     def __init__(self, sprite):
         # character sprite
-        self.sprite = pygame.image.load(sprite).convert_alpha()
+        self.original_sprite = pygame.image.load(sprite).convert_alpha()
+        self.sprite = self.original_sprite
 
         #character position
         self.x = 400 - self.sprite.get_rect().width/2
@@ -16,4 +17,4 @@ class character:
         self.angle = 0
 
     def rotate(self, angle):
-        self.sprite = pygame.transform.rotate(self.sprite, angle)
+        self.sprite = pygame.transform.rotate(self.original_sprite, angle)

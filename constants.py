@@ -11,4 +11,4 @@ main_window_title = "Hotline clermont"
 # image_icon = ""
 
 #pictures
-# background_pic = "images/fond.jpg"
+background_pic = r"C:\Users\vigor\PycharmProjects\Hotline Clermont\static\src\img\Crack_Texture_by_struckdumb.jpg"
