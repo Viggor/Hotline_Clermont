@@ -11,8 +11,8 @@ class character:
         self.sprite = pygame.image.load(sprite).convert_alpha()
 
         #character position
-        self.x = 100
-        self.y = 100
+        self.x = 400 - self.sprite.get_rect().width/2
+        self.y = 300 - self.sprite.get_rect().height/2
         self.angle = 0
 
     def rotate(self, angle):

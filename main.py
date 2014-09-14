@@ -58,10 +58,7 @@ while main_loop:
                     print(angleDegree)
 
                     butcher.rotate(angleDegree)
-                    butcher_centerx = butcher.x + butcher.sprite.get_rect().width/2
-                    butcher_centery = butcher.y + butcher.sprite.get_rect().height/2
-                    butcher.x = butcher_centerx - butcher.sprite.get_rect().width/2
-                    butcher.y = butcher_centery - butcher.sprite.get_rect().height/2
+
 
 
         #Refresh position

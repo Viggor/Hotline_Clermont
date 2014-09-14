@@ -2,8 +2,9 @@
 __author__ = 'vigor'
 
 #window params
-main_window_height = 600
 main_window_width = 800
+main_window_height = 600
+
 
 #window info
 main_window_title = "Hotline clermont"
