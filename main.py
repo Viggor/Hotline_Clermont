@@ -52,7 +52,6 @@ while main_loop:
                         main_loop = 0
 
                 elif event.type == MOUSEMOTION: #mouse mouvement
-                    mouse_pos = event.pos[0] * event.pos[1]
                     angleRadian = math.atan2(event.pos[0] - butcher.x, event.pos[1] - butcher.y)
                     angleDegree = angleRadian * (180 / math.pi)
                     print(angleDegree)
@@ -60,8 +59,8 @@ while main_loop:
                     butcher.rotate(angleDegree)
 
 
-
         #Refresh position
-        fenetre.blit(butcher.sprite, (butcher.x, butcher.y))
+        # fenetre.blit(butcher.sprite, (butcher.x, butcher.y))
+        fenetre.blit(butcher.sprite, butcher.sprite.get_rect())
 
         pygame.display.flip()
