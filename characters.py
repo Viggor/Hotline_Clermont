@@ -55,3 +55,16 @@ class character:
         if direction == 'down_left':
             self.x -= 10
             self.y += 10
+
+    def check_pos(self):
+        if self.x > 800 - self.original_sprite.get_rect().width:
+            self.x = 800 - self.original_sprite.get_rect().width
+
+        if self.x < 0:
+            self.x = 0
+
+        if self.y > 600 - self.original_sprite.get_rect().height:
+            self.y = 600 - self.original_sprite.get_rect().height
+
+        if self.y < 0:
+            self.y = 0

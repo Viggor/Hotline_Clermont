@@ -54,27 +54,35 @@ while main_loop:
                     main_loop = 0
                 elif keys[K_d] and keys[K_w]:
                     butcher.move('up_right')
+                    butcher.check_pos()
                     butcher.rotate()
                 elif keys[K_d] and keys[K_s]:
                     butcher.move('down_right')
+                    butcher.check_pos()
                     butcher.rotate()
                 elif keys[K_a] and keys[K_w]:
                     butcher.move('up_left')
+                    butcher.check_pos()
                     butcher.rotate()
                 elif keys[K_a] and keys[K_s]:
                     butcher.move('down_left')
+                    butcher.check_pos()
                     butcher.rotate()
                 elif keys[K_d]:
                     butcher.move('right')
+                    butcher.check_pos()
                     butcher.rotate()
                 elif keys[K_a]:
                     butcher.move('left')
+                    butcher.check_pos()
                     butcher.rotate()
                 elif keys[K_w]:
                     butcher.move('up')
+                    butcher.check_pos()
                     butcher.rotate()
                 elif keys[K_s]:
                     butcher.move('down')
+                    butcher.check_pos()
                     butcher.rotate()
 
             elif event.type == MOUSEMOTION:  #mouse mouvement
