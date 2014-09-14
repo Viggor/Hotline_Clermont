@@ -11,4 +11,5 @@ main_window_title = "Hotline clermont"
 # image_icon = ""
 
 #pictures
-background_pic = r"C:\Users\vigor\PycharmProjects\Hotline Clermont\static\src\img\Crack_Texture_by_struckdumb.jpg"
+background_pic = r"C:\Users\vigor\PycharmProjects\Hotline Clermont\static\src\img\blue_minimalistic_pattern_grid.jpg"
+main_character = r"C:\Users\vigor\PycharmProjects\Hotline Clermont\static\src\img\HM_ButcherWalking.png"
