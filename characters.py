@@ -13,17 +13,28 @@ class character:
         self.original_sprite = pygame.transform.rotate(self.original_sprite, -90)
         self.sprite = self.original_sprite
 
+        self.sprite_impact = pygame.image.load(bullet_impact_pic).convert_alpha()
+
         #character position
         self.x = 400 - self.sprite.get_rect().width/2
         self.y = 300 - self.sprite.get_rect().height/2
         self.angle = 0
+        self.side = 32
+        self.dx = 0
+        self.dy = 0
 
-        self.last_pos_x = 0
-        self.last_pos_y = 0
+        # self.last_pos_x = 0
+        # self.last_pos_y = 0
+
+        self.impact_pos_x = 0
+        self.impact_pos_y = 0
+
+        self.fire_sound = pygame.mixer.Sound(gun_fire_sound)
 
     def rotate(self):
         angleRadian = math.atan2(self.last_pos_x - self.x, self.last_pos_y - self.y)
         angleDegree = angleRadian * (180 / math.pi)
+        self.angle = angleDegree
         self.sprite = pygame.transform.rotate(self.original_sprite, angleDegree)
 
     def move(self, direction):
@@ -68,3 +79,8 @@ class character:
 
         if self.y < 0:
             self.y = 0
+
+    def fire(self, event):
+        self.impact_pos_x = event.pos[0]
+        self.impact_pos_y = event.pos[1]
+        self.fire_sound.play()

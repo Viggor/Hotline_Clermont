@@ -13,3 +13,8 @@ main_window_title = "Hotline clermont"
 #pictures
 background_pic = r"C:\Users\vigor\PycharmProjects\Hotline Clermont\static\src\img\blue_minimalistic_pattern_grid.jpg"
 main_character = r"C:\Users\vigor\PycharmProjects\Hotline Clermont\static\src\img\HM_ButcherWalking.png"
+bullet_pic = r"C:\Users\vigor\PycharmProjects\Hotline Clermont\static\src\img\bullet.png"
+bullet_impact_pic = r"C:\Users\vigor\PycharmProjects\Hotline Clermont\static\src\img\bullet.hole.png"
+
+#Sounds effects
+gun_fire_sound = r"C:\Users\vigor\PycharmProjects\Hotline Clermont\static\src\sound\GUN_FIRE.wav"
