@@ -28,6 +28,7 @@ class character:
 
         self.impact_pos_x = 0
         self.impact_pos_y = 0
+        self.impact_list = []
 
         self.fire_sound = pygame.mixer.Sound(gun_fire_sound)
 
@@ -81,6 +82,10 @@ class character:
             self.y = 0
 
     def fire(self, event):
-        self.impact_pos_x = event.pos[0]
-        self.impact_pos_y = event.pos[1]
+        self.impact_list.append((event.pos[0], event.pos[1]))
+        if len(self.impact_list) > 10:
+            self.impact_list.pop(0)
+        self.fire_sound.set_volume(0.1)
+        if pygame.mixer.get_busy():
+            self.fire_sound.stop()
         self.fire_sound.play()

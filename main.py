@@ -13,7 +13,7 @@ from pygame.locals import *
 
 from characters import *
 from constants import *
-from projectiles import *
+# from projectiles import *
 
 pygame.init()
 
@@ -37,7 +37,7 @@ while main_loop:
 
     #butcher creation
     butcher = character(main_character)
-    bullet = bullet(butcher)
+    # bullet = bullet(butcher)
 
     pygame.key.set_repeat(10, 30)
 
@@ -99,7 +99,8 @@ while main_loop:
         #Refresh position
         window.blit(background, (0, 0))
         window.blit(butcher.sprite, (butcher.x, butcher.y))
-        window.blit(butcher.sprite_impact, (butcher.impact_pos_x, butcher.impact_pos_y))
+        for impact in butcher.impact_list:
+            window.blit(butcher.sprite_impact, impact)
         # window.blit(bullet.sprite, (bullet.rect.centerx, bullet.rect.centery))
 
         pygame.display.flip()
